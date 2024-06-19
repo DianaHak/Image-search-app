@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #F1F1F1;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    margin: 50px 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+#search-input {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #B5C18E;
+    color: white;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#search-button:hover {
+    background-color: #EADBC8;
+    color: black;
+}
+
+.search-results {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-result {
+    margin-bottom: 60px;
+    width: 30%;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.search-result img {
+    width: 100%;
+    height: calc(100% - 40px); /* Adjust height to create space for the link */
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+    background-color: transparent;
+}
+
+.search-result:hover img {
+    opacity: 0.8;
+}
+
+.search-result a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: black;
+    text-align: center; /* Center the text */
+    vertical-align: middle;
+}
+
+#show-more-button {
+    padding: 10px 20px;
+    background-color: #B5C18E;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 30px auto;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .search-results {
+        padding: 20px;
+    }
+    .search-result {
+        width: 45%;
+        height: auto; /* Adjust height to allow content resizing */
+    }
+    .search-result a {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-result {
+        width: 100%;
+        height: auto; /* Ensure proper resizing */
+    }
+    .search-result a {
+        font-size: 12px; /* Further adjust font size for smaller screens */
+    }
+}
